@@ -19,7 +19,7 @@
 			"type": "string",
 			"defaultValue": "0727-065850-q6k6sv5c"
 		},
-		"trigger-process-f1-data2_properties_master-pipeline_parameters_v_window_end_date": {
+		"trigger1_properties_pipeline_parameters_v_window_end_date": {
 			"type": "string",
 			"defaultValue": "@trigger().outputs.windowEndTime"
 		}
@@ -812,32 +812,33 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/trigger-process-f1-data2')]",
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
 				"runtimeState": "Started",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "master-pipeline",
-							"type": "PipelineReference"
-						},
-						"parameters": {
-							"v_window_end_date": "[parameters('trigger-process-f1-data2_properties_master-pipeline_parameters_v_window_end_date')]"
-						}
+				"pipeline": {
+					"pipelineReference": {
+						"referenceName": "master-pipeline",
+						"type": "PipelineReference"
+					},
+					"parameters": {
+						"v_window_end_date": "[parameters('trigger1_properties_pipeline_parameters_v_window_end_date')]"
 					}
-				],
-				"type": "ScheduleTrigger",
+				},
+				"type": "TumblingWindowTrigger",
 				"typeProperties": {
-					"recurrence": {
-						"frequency": "Day",
-						"interval": 7,
-						"startTime": "2021-03-21T01:10:00",
-						"endTime": "2021-04-25T09:10:00",
-						"timeZone": "China Standard Time"
-					}
+					"frequency": "Hour",
+					"interval": 168,
+					"startTime": "2021-03-14T09:21:00Z",
+					"endTime": "2021-04-25T09:21:00Z",
+					"delay": "00:00:00",
+					"maxConcurrency": 10,
+					"retryPolicy": {
+						"intervalInSeconds": 30
+					},
+					"dependsOn": []
 				}
 			},
 			"dependsOn": [
