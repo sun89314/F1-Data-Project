@@ -19,8 +19,8 @@
 			"recurrence": {
 				"frequency": "Day",
 				"interval": 7,
-				"startTime": "2021-03-28T08:55:00",
-				"endTime": "2021-04-18T08:55:00",
+				"startTime": "2021-03-21T16:55:00",
+				"endTime": "2021-04-25T08:55:00",
 				"timeZone": "China Standard Time"
 			}
 		}
