@@ -300,12 +300,18 @@
 			}
 		],
 		"parameters": {
+			"v_window_end_date": {
+				"type": "string"
+			},
 			"v_data_source": {
 				"type": "string",
 				"defaultValue": "Ergast API"
-			},
-			"v_window_end_date": {
-				"type": "string"
+			}
+		},
+		"variables": {
+			"v_data_source": {
+				"type": "String",
+				"defaultValue": "Ergast API"
 			}
 		},
 		"annotations": []
