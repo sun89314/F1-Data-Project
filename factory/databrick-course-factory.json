@@ -1,0 +1,9 @@
+{
+	"name": "databrick-course-factory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d3f1a01c-3d6f-469d-bd4f-519638ecac3b",
+		"tenantId": "4ccca3b5-71cd-4e6d-974b-4d9beb96c6d6"
+	}
+}
