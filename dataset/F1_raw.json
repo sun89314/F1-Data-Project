@@ -16,10 +16,10 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "@formatDateTime(dataset().p_window_end_date)",
+					"value": "@formatDateTime(dataset().p_window_end_date,'yyyy-MM-dd')",
 					"type": "Expression"
 				},
-				"fileSystem": "raw"
+				"fileSystem": "prossessed"
 			}
 		},
 		"schema": {
