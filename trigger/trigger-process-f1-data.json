@@ -1,0 +1,28 @@
+{
+	"name": "trigger-process-f1-data",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "master-pipeline",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"v_window_end_date": "@trigger().outputs.windowEndTime"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 7,
+				"startTime": "2021-03-28T08:55:00",
+				"endTime": "2021-04-18T08:55:00",
+				"timeZone": "China Standard Time"
+			}
+		}
+	}
+}
