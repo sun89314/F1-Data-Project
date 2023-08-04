@@ -1,0 +1,64 @@
+{
+	"name": "F1_precessed",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Databrick Storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "prossessed"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "circuit_id",
+				"type": "INT32"
+			},
+			{
+				"name": "circuit_ref",
+				"type": "UTF8"
+			},
+			{
+				"name": "name",
+				"type": "UTF8"
+			},
+			{
+				"name": "location",
+				"type": "UTF8"
+			},
+			{
+				"name": "country",
+				"type": "UTF8"
+			},
+			{
+				"name": "latitude",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "longitude",
+				"type": "DOUBLE"
+			},
+			{
+				"name": "altitude",
+				"type": "INT32"
+			},
+			{
+				"name": "data_source",
+				"type": "UTF8"
+			},
+			{
+				"name": "file_date",
+				"type": "UTF8"
+			},
+			{
+				"name": "ingestion_date",
+				"type": "INT96"
+			}
+		]
+	}
+}
