@@ -1,5 +1,5 @@
 {
-	"name": "ingest_circuites_file",
+	"name": "ingest_file",
 	"properties": {
 		"activities": [
 			{
