@@ -1,0 +1,18 @@
+{
+	"name": "trigger-process-f1-data2",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 7,
+				"startTime": "2021-03-21T17:10:00",
+				"endTime": "2021-04-25T09:10:00",
+				"timeZone": "China Standard Time"
+			}
+		}
+	}
+}
